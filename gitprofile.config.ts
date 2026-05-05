@@ -30,31 +30,15 @@ const CONFIG = {
     },
 
     external: {
-      header: 'Featured Projects',
+      header: 'Professional Summary',
       projects: [
         {
-          title: 'Linux & Networking Reverse Proxy Lab',
+          title: 'About Me',
           description:
-            'Production-style Linux and networking lab using multiple Ubuntu Server virtual machines. The project demonstrates SSH key-based access, static networking, Nginx reverse proxy configuration, TLS termination, rate limiting, logging, firewall basics, systemd services, health checks, and structured troubleshooting documentation.',
+            'Technical Support and Cloud Support professional with experience in customer success operations, Azure reporting, service health analysis, troubleshooting, and technical documentation. Currently developing hands-on Linux, networking, cloud, and DevOps/SRE projects to grow into production-focused cloud engineering roles.',
           imageUrl:
-            'https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1200&auto=format&fit=crop',
-          link: 'https://github.com/ODR3N',
-        },
-        {
-          title: 'Vehicle Speed Configuration Web Platform',
-          description:
-            'Web platform built with C#, .NET Core MVC, HTML, CSS, and MySQL to configure vehicle speed limiter modules through USB. The solution included user authentication, device detection, real-time speed monitoring, configuration history, technical documentation, and direct coordination with a real client.',
-          imageUrl:
-            'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
-          link: 'https://github.com/ODR3N',
-        },
-        {
-          title: 'LFCS Linux Administration Practice',
-          description:
-            'Hands-on Linux administration practice focused on LFCS objectives, including users and groups, permissions, storage, LVM, networking, services, logs, cron jobs, SSH, firewall configuration, and troubleshooting under practical scenarios.',
-          imageUrl:
-            'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
-          link: 'https://github.com/ODR3N',
+            'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop',
+          link: 'https://www.linkedin.com/in/afc2806',
         },
       ],
     },
