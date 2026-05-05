@@ -15,6 +15,8 @@ const ExternalProjectCard = ({
   loading: boolean;
   googleAnalyticId?: string;
 }) => {
+  const isProfessionalSummary = header === 'Professional Summary';
+
   const renderSkeleton = () => {
     const array = [];
     for (let index = 0; index < externalProjects.length; index++) {
@@ -70,7 +72,11 @@ const ExternalProjectCard = ({
   const renderExternalProjects = () => {
     return externalProjects.map((item, index) => (
       <a
-        className="card shadow-md card-sm bg-base-100 cursor-pointer"
+        className={
+          isProfessionalSummary
+            ? 'card shadow-md card-sm bg-base-100 cursor-pointer w-full'
+            : 'card shadow-md card-sm bg-base-100 cursor-pointer'
+        }
         key={index}
         href={item.link}
         onClick={(e) => {
@@ -90,29 +96,61 @@ const ExternalProjectCard = ({
         }}
       >
         <div className="p-8 h-full w-full">
-          <div className="flex items-center flex-col">
-            <div className="w-full">
-              <div className="px-4">
-                <div className="text-center w-full">
-                  <h2 className="font-medium text-center opacity-60 mb-2">
+          <div
+            className={
+              isProfessionalSummary
+                ? 'flex items-center flex-col lg:flex-row lg:items-center gap-6'
+                : 'flex items-center flex-col'
+            }
+          >
+            {item.imageUrl && (
+              <div className="avatar opacity-90 shrink-0">
+                <div
+                  className={
+                    isProfessionalSummary
+                      ? 'w-24 h-24 mask mask-squircle'
+                      : 'w-24 h-24 mask mask-squircle'
+                  }
+                >
+                  <LazyImage
+                    src={item.imageUrl}
+                    alt={'thumbnail'}
+                    placeholder={skeleton({
+                      widthCls: 'w-full',
+                      heightCls: 'h-full',
+                      shape: '',
+                    })}
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className={isProfessionalSummary ? 'w-full' : 'w-full'}>
+              <div className={isProfessionalSummary ? 'px-2' : 'px-4'}>
+                <div
+                  className={
+                    isProfessionalSummary
+                      ? 'text-left w-full'
+                      : 'text-center w-full'
+                  }
+                >
+                  <h2
+                    className={
+                      isProfessionalSummary
+                        ? 'font-semibold text-base-content mb-3'
+                        : 'font-medium text-center opacity-60 mb-2'
+                    }
+                  >
                     {item.title}
                   </h2>
-                  {item.imageUrl && (
-                    <div className="avatar opacity-90">
-                      <div className="w-24 h-24 mask mask-squircle">
-                        <LazyImage
-                          src={item.imageUrl}
-                          alt={'thumbnail'}
-                          placeholder={skeleton({
-                            widthCls: 'w-full',
-                            heightCls: 'h-full',
-                            shape: '',
-                          })}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  <p className="mt-2 text-base-content text-sm text-justify">
+
+                  <p
+                    className={
+                      isProfessionalSummary
+                        ? 'mt-2 text-base-content/90 text-sm leading-relaxed text-left'
+                        : 'mt-2 text-base-content text-sm text-justify'
+                    }
+                  >
                     {item.description}
                   </p>
                 </div>
@@ -151,12 +189,21 @@ const ExternalProjectCard = ({
                   <div className="text-base-content/60 text-xs sm:text-sm mt-1 truncate">
                     {loading
                       ? skeleton({ widthCls: 'w-32', heightCls: 'h-4' })
-                      : `Showcasing ${externalProjects.length} projects`}
+                      : isProfessionalSummary
+                        ? 'Professional overview'
+                        : `Showcasing ${externalProjects.length} projects`}
                   </div>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div
+              className={
+                isProfessionalSummary
+                  ? 'grid grid-cols-1 gap-6'
+                  : 'grid grid-cols-1 md:grid-cols-2 gap-6'
+              }
+            >
               {loading ? renderSkeleton() : renderExternalProjects()}
             </div>
           </div>
