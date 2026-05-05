@@ -2,228 +2,234 @@
 
 const CONFIG = {
   github: {
-    username: 'ODR3N', // Your GitHub org/user name. (This is the only required config)
+    username: 'ODR3N',
   },
+
   /**
-   * If you are deploying to https://<USERNAME>.github.io/, for example your repository is at https://github.com/arifszn/arifszn.github.io, set base to '/'.
-   * If you are deploying to https://<USERNAME>.github.io/<REPO_NAME>/,
-   * for example your repository is at https://github.com/arifszn/portfolio, then set base to '/portfolio/'.
+   * If your repository is ODR3N.github.io, keep base as '/'.
+   * If your repository is named something like portfolio, change it to '/portfolio/'.
    */
   base: '/',
+
   projects: {
     github: {
-      display: true, // Display GitHub projects?
-      header: 'Github Projects',
-      mode: 'automatic', // Mode can be: 'automatic' or 'manual'
+      display: true,
+      header: 'GitHub Projects',
+      mode: 'automatic',
       automatic: {
-        sortBy: 'stars', // Sort projects by 'stars' or 'updated'
-        limit: 8, // How many projects to display.
+        sortBy: 'updated',
+        limit: 6,
         exclude: {
-          forks: false, // Forked projects will not be displayed if set to true.
-          projects: [], // These projects will not be displayed. example: ['arifszn/my-project1', 'arifszn/my-project2']
+          forks: true,
+          projects: [],
         },
       },
       manual: {
-        // Properties for manually specifying projects
-        projects: ['arifszn/gitprofile', 'arifszn/pandora'], // List of repository names to display. example: ['arifszn/my-project1', 'arifszn/my-project2']
+        projects: [],
       },
     },
+
     external: {
-      header: 'My Projects',
-      // To hide the `External Projects` section, keep it empty.
+      header: 'Featured Projects',
       projects: [
         {
-          title: 'Project Name',
+          title: 'Linux & Networking Reverse Proxy Lab',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Production-style Linux and networking lab using multiple Ubuntu Server virtual machines. The project demonstrates SSH key-based access, static networking, Nginx reverse proxy configuration, TLS termination, rate limiting, logging, firewall basics, systemd services, health checks, and structured troubleshooting documentation.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1200&auto=format&fit=crop',
+          link: 'https://github.com/ODR3N',
         },
         {
-          title: 'Project Name',
+          title: 'Vehicle Speed Configuration Web Platform',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut.',
+            'Web platform built with C#, .NET Core MVC, HTML, CSS, and MySQL to configure vehicle speed limiter modules through USB. The solution included user authentication, device detection, real-time speed monitoring, configuration history, technical documentation, and direct coordination with a real client.',
           imageUrl:
-            'https://img.freepik.com/free-vector/illustration-gallery-icon_53876-27002.jpg',
-          link: 'https://example.com',
+            'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop',
+          link: 'https://github.com/ODR3N',
+        },
+        {
+          title: 'LFCS Linux Administration Practice',
+          description:
+            'Hands-on Linux administration practice focused on LFCS objectives, including users and groups, permissions, storage, LVM, networking, services, logs, cron jobs, SSH, firewall configuration, and troubleshooting under practical scenarios.',
+          imageUrl:
+            'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
+          link: 'https://github.com/ODR3N',
         },
       ],
     },
   },
-  seo: { title: 'Portfolio of Ariful Alam', description: '', imageURL: '' },
+
+  seo: {
+    title: 'Adrian Fonseca Coto | Technical Support & Cloud Support Portfolio',
+    description:
+      'Portfolio of Adrian Fonseca Coto, Computer Systems Engineer focused on Technical Support, Cloud Support, Linux administration, Azure, troubleshooting, customer success operations, and DevOps/SRE foundations.',
+    imageURL: '',
+  },
+
   social: {
-    linkedin: 'ariful-alam',
-    x: 'arif_szn',
-    mastodon: 'arifszn@mastodon.social',
+    linkedin: 'afc2806',
+    x: '',
+    mastodon: '',
     researchGate: '',
     facebook: '',
     instagram: '',
     reddit: '',
     threads: '',
-    youtube: '', // example: 'pewdiepie'
+    youtube: '',
     udemy: '',
     dribbble: '',
     behance: '',
-    medium: 'arifszn',
-    dev: 'arifszn',
-    stackoverflow: '', // example: '1/jeff-atwood'
+    medium: '',
+    dev: '',
+    stackoverflow: '',
     discord: '',
     telegram: '',
-    website: 'https://www.arifszn.com',
-    phone: '',
-    email: '',
+    website: '',
+    phone: '+506 8780-6996',
+    email: 'adrfc.pro@gmail.com',
   },
+
   resume: {
-    fileUrl:
-      'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf', // Empty fileUrl will hide the `Download Resume` button.
+    fileUrl: '',
   },
+
   skills: [
-    'PHP',
-    'Laravel',
-    'JavaScript',
-    'React.js',
-    'Node.js',
-    'Nest.js',
-    'MySQL',
-    'PostgreSQL',
+    'Technical Support',
+    'Cloud Support',
+    'Customer Success',
+    'Troubleshooting',
+    'Root Cause Analysis',
+    'Incident Management',
+    'Escalation Management',
+    'ServiceNow',
+    'Microsoft Azure',
+    'Power BI',
+    'SQL',
+    'Excel',
+    'PowerPoint',
+    'Linux',
+    'Ubuntu Server',
+    'LFCS',
+    'Bash',
+    'Systemd',
+    'SSH',
+    'Networking',
+    'TCP/IP',
+    'DNS',
+    'HTTP/HTTPS',
+    'Nginx',
+    'Firewalls',
     'Git',
-    'Docker',
-    'PHPUnit',
+    'GitHub',
+    'C#',
+    '.NET Core',
+    'MVC',
+    'MySQL',
+    'HTML',
     'CSS',
-    'Antd',
-    'Tailwind',
+    'Technical Documentation',
+    'Customer Communication',
   ],
+
   experiences: [
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'September 2021',
+      company: 'Teknowledge',
+      position: 'Customer Success Manager Support L2',
+      from: 'October 2024',
       to: 'Present',
-      companyLink: 'https://example.com',
+      companyLink: '',
     },
     {
-      company: 'Company Name',
-      position: 'Position',
-      from: 'July 2019',
-      to: 'August 2021',
-      companyLink: 'https://example.com',
+      company: 'Intronix S.A.',
+      position: 'Electronic Engineering Technician',
+      from: 'October 2020',
+      to: 'October 2024',
+      companyLink: '',
     },
   ],
+
   certifications: [
     {
-      name: 'Lorem ipsum',
-      body: 'Lorem ipsum dolor sit amet',
-      year: 'March 2022',
-      link: 'https://example.com',
+      name: 'Linux Foundation Certified System Administrator (LFCS)',
+      body: 'Hands-on certification validating Linux administration skills across users, permissions, networking, storage, services, security basics, and troubleshooting.',
+      year: '2026',
+      link: '',
+    },
+    {
+      name: 'Whizlabs - Manage Identities and Governance in Azure',
+      body: 'Practical Azure learning focused on identity, governance, access control, and cloud administration fundamentals.',
+      year: '2026',
+      link: '',
+    },
+    {
+      name: 'Whizlabs - Storage in Azure',
+      body: 'Azure training focused on storage services, cloud storage concepts, configuration, and administration fundamentals.',
+      year: '2026',
+      link: '',
+    },
+    {
+      name: 'Whizlabs - Compute Resources in Azure',
+      body: 'Azure training focused on compute resources, virtual machines, cloud workloads, and infrastructure fundamentals.',
+      year: '2026',
+      link: '',
     },
   ],
+
   educations: [
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2015',
-      to: '2019',
+      institution: 'Universidad Fidélitas',
+      degree: 'Bachelor’s Degree in Computer Systems Engineering',
+      from: '2021',
+      to: '2026',
     },
     {
-      institution: 'Institution Name',
-      degree: 'Degree',
-      from: '2012',
-      to: '2014',
+      institution: 'COVAO',
+      degree: 'Mid-Level Technician in Industrial Electronics',
+      from: '2018',
+      to: '2020',
     },
   ],
-  publications: [
-    {
-      title: 'Publication Title',
-      conferenceName: '',
-      journalName: 'Journal Name',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-    {
-      title: 'Publication Title',
-      conferenceName: 'Conference Name',
-      journalName: '',
-      authors: 'John Doe, Jane Smith',
-      link: 'https://example.com',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    },
-  ],
-  // Display articles from your medium or dev account. (Optional)
-  blog: {
-    source: 'dev', // medium | dev
-    username: 'arifszn', // to hide blog section, keep it empty
-    limit: 2, // How many articles to display. Max is 10.
-  },
-  googleAnalytics: {
-    id: '', // GA3 tracking id/GA4 tag id UA-XXXXXXXXX-X | G-XXXXXXXXXX
-  },
-  // Track visitor interaction and behavior. https://www.hotjar.com
-  hotjar: { id: '', snippetVersion: 6 },
-  themeConfig: {
-    defaultTheme: 'lofi',
 
-    // Hides the switch in the navbar
-    // Useful if you want to support a single color mode
+  publications: [],
+
+  blog: {
+    source: 'dev',
+    username: '',
+    limit: 2,
+  },
+
+  googleAnalytics: {
+    id: '',
+  },
+
+  hotjar: {
+    id: '',
+    snippetVersion: 6,
+  },
+
+  themeConfig: {
+    defaultTheme: 'business',
+
     disableSwitch: false,
 
-    // Should use the prefers-color-scheme media-query,
-    // using user system preferences, instead of the hardcoded defaultTheme
     respectPrefersColorScheme: false,
 
-    // Display the ring in Profile picture
     displayAvatarRing: true,
 
-    // Available themes. To remove any theme, exclude from here.
     themes: [
-      'light',
-      'dark',
-      'cupcake',
-      'bumblebee',
-      'emerald',
-      'corporate',
-      'synthwave',
-      'retro',
-      'cyberpunk',
-      'valentine',
-      'halloween',
-      'garden',
-      'forest',
-      'aqua',
-      'lofi',
-      'pastel',
-      'fantasy',
-      'wireframe',
-      'black',
-      'luxury',
-      'dracula',
-      'cmyk',
-      'autumn',
       'business',
-      'acid',
-      'lemonade',
-      'night',
-      'coffee',
-      'winter',
-      'dim',
+      'corporate',
       'nord',
-      'sunset',
-      'caramellatte',
-      'abyss',
-      'silk',
-      'procyon',
+      'winter',
+      'night',
+      'dark',
+      'light',
+      'lofi',
     ],
   },
 
-  // Optional Footer. Supports plain text or HTML.
-  footer: `Made with <a 
-      class="text-primary" href="https://github.com/arifszn/gitprofile"
-      target="_blank"
-      rel="noreferrer"
-    >GitProfile</a> and ❤️`,
+  footer: `Portfolio of Adrian Fonseca Coto`,
 
   enablePWA: true,
 };
