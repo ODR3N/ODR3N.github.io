@@ -20,7 +20,7 @@ const CONFIG = {
           description:
             'Technical Support and Cloud Support professional with experience in customer success operations, Azure reporting, service health analysis, troubleshooting, and technical documentation. Currently developing hands-on Linux, networking, cloud, and DevOps/SRE projects to grow into production-focused cloud engineering roles.',
           imageUrl:
-            'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop',
+            '/aboutme.jpeg',
           link: 'https://www.linkedin.com/in/afc2806',
       },
     ],
