@@ -128,11 +128,17 @@ const CONFIG = {
       name: 'Linux Foundation Certified System Administrator (LFCS)',
       body: 'Hands-on certification validating Linux administration skills across users, permissions, networking, storage, services, security basics, and troubleshooting.',
       year: '2026',
-      link: '',
+      link: 'https://www.credly.com/badges/638cf953-108c-4b77-a37c-bbee9ae55f95/linked_in_profile',
     },
     {
       name: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
       body: 'Foundational certification covering core cloud concepts, Azure services, pricing, governance, security, compliance, and basic cloud administration principles.',
+      year: '2025',
+      link: 'https://learn.microsoft.com/api/credentials/share/en-us/AdrianFonseca-1773/291F39D812EBB34C?sharingId',
+    },
+    {
+      name: 'Certificate for Technical Support Fundamentals',
+      body: 'Gain essential skills in Information Technology, including computer hardware, the Internet, software, troubleshooting, and customer service.',
       year: '2025',
       link: '',
     },
