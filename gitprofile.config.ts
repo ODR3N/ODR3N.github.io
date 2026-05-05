@@ -12,23 +12,6 @@ const CONFIG = {
   base: '/',
 
   projects: {
-    github: {
-      display: true,
-      header: 'GitHub Projects',
-      mode: 'automatic',
-      automatic: {
-        sortBy: 'updated',
-        limit: 6,
-        exclude: {
-          forks: true,
-          projects: [],
-        },
-      },
-      manual: {
-        projects: [],
-      },
-    },
-
     external: {
       header: 'Professional Summary',
       projects: [
@@ -39,11 +22,27 @@ const CONFIG = {
           imageUrl:
             'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop',
           link: 'https://www.linkedin.com/in/afc2806',
-        },
-      ],
-    },
+      },
+    ],
   },
 
+  github: {
+    display: true,
+    header: 'GitHub Projects',
+    mode: 'automatic',
+    automatic: {
+      sortBy: 'updated',
+      limit: 6,
+      exclude: {
+        forks: true,
+        projects: [],
+      },
+    },
+    manual: {
+      projects: [],
+    },
+  },
+},
   seo: {
     title: 'Adrian Fonseca Coto | Technical Support & Cloud Support Portfolio',
     description:
