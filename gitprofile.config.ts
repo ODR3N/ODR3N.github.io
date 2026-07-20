@@ -70,7 +70,7 @@ const CONFIG = {
   },
 
   resume: {
-    fileUrl: 'https://drive.google.com/file/d/1DVQk_eM9dxQybgPabNC0XiyClYIHLO5j/view?usp=sharing',
+    fileUrl: 'https://drive.google.com/file/d/1v8XOPppa_jzackY-T49sA2VDeGBQkAA9/view?usp=sharing',
   },
 
   skills: [
