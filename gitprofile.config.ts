@@ -18,7 +18,7 @@ const CONFIG = {
         {
           title: 'About Me',
           description:
-            'Technical Support and Cloud Support professional with experience in customer success operations, Azure reporting, service health analysis, troubleshooting, and technical documentation. Currently developing hands-on Linux, networking, cloud, and DevOps/SRE projects to grow into production-focused cloud engineering roles.',
+            'Technical Support and Cloud Support professional (AZ-104 & LFCS certified) with 5+ years of experience managing 500+ annual support requests with zero SLA breaches, across customer success operations, Azure reporting, service health analysis, and technical documentation. Building hands-on Linux, networking, cloud, and DevOps/SRE projects to grow into production-focused cloud engineering roles. Also open to Help Desk, IT Support, and System Administrator positions. Based in Costa Rica, open to remote roles across the US, Canada, Latin America, and Europe. English: C1 Advanced (EF SET 77/100).',
           imageUrl:
             '/aboutme.jpeg',
           link: 'https://www.linkedin.com/in/afc2806',
@@ -46,8 +46,8 @@ const CONFIG = {
   seo: {
     title: 'Adrian Fonseca Coto | Technical Support & Cloud Support Portfolio',
     description:
-      'Portfolio of Adrian Fonseca Coto, Computer Systems Engineer focused on Technical Support, Cloud Support, Linux administration, Azure, troubleshooting, customer success operations, and DevOps/SRE foundations.',
-    imageURL: '',
+      'Portfolio of Adrian Fonseca Coto, Computer Systems Engineer based in Costa Rica, open to remote roles across the US, Canada, Latin America, and Europe. Focused on Technical Support, Cloud Support, Linux administration, Azure, troubleshooting, and DevOps/SRE foundations.',
+    imageURL: '/aboutme.jpeg',
   },
 
   social: {
@@ -85,11 +85,17 @@ const CONFIG = {
     'Incident Management',
     'ServiceNow',
     'Microsoft Azure',
+    'Entra ID',
+    'RBAC',
+    'Key Vault',
+    'Managed Identity',
+    'MFA',
     'Power BI',
     'SQL',
     'Linux',
     'Ubuntu Server',
     'Bash',
+    'Python',
     'Systemd',
     'SSH',
     'Networking',
@@ -109,14 +115,14 @@ const CONFIG = {
   experiences: [
     {
       company: 'Teknowledge',
-      position: 'Customer Success Manager Support L2',
+      position: 'Customer Success Manager Technical Support, Microsoft Partner Operations',
       from: 'April 2025',
-      to: 'Present',
+      to: 'July 2026',
       companyLink: '',
     },
     {
       company: 'Intronix S.A.',
-      position: 'Electronic Engineering Technician',
+      position: 'Technical Support & Electronics Technician',
       from: 'October 2020',
       to: 'December 2024',
       companyLink: '',
@@ -125,10 +131,22 @@ const CONFIG = {
 
   certifications: [
     {
+      name: 'Microsoft Certified: Azure Administrator Associate (AZ-104)',
+      body: 'Validates skills in managing Azure identities, governance, storage, compute, and virtual networks — including implementing, monitoring, and maintaining Microsoft Azure solutions.',
+      year: '2026',
+      link: 'https://learn.microsoft.com/api/credentials/share/en-us/AdrianFonseca-2806/5C4E5ECF63DB14BD?sharingId',
+    },
+    {
       name: 'Linux Foundation Certified System Administrator (LFCS)',
       body: 'Hands-on certification validating Linux administration skills across users, permissions, networking, storage, services, security basics, and troubleshooting.',
       year: '2026',
       link: 'https://www.credly.com/badges/638cf953-108c-4b77-a37c-bbee9ae55f95/linked_in_profile',
+    },
+    {
+      name: 'Cisco Certified Network Associate (CCNA) — Modules I & II',
+      body: 'Validates networking fundamentals including TCP/IP, DNS, DHCP, switching, VLANs, and routing.',
+      year: '2022',
+      link: '',
     },
     {
       name: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
