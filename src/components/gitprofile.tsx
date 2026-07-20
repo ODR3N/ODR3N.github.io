@@ -218,10 +218,10 @@ const GitProfile = ({ config }: { config: Config }) => {
                       skills={sanitizedConfig.skills}
                     />
                   )}
-                  {sanitizedConfig.languages?.length !== 0 && (
+                  {(config as any).languages?.length !== 0 && (
                     <LanguageCard
                       loading={loading}
-                      languages={sanitizedConfig.languages}
+                      languages={(config as any).languages}
                     />
                   )}
                   {sanitizedConfig.educations.length !== 0 && (
