@@ -43,7 +43,7 @@ const CONFIG = {
     title: 'Adrian Fonseca Coto | Technical Support & Cloud Support Portfolio',
     description:
       'Portfolio of Adrian Fonseca Coto, Computer Systems Engineer based in Costa Rica, open to remote roles across the US, Canada, Latin America, and Europe. Focused on Technical Support, Cloud Support, Linux administration, Azure, troubleshooting, and DevOps/SRE foundations.',
-    imageURL: '/aboutme.jpeg',
+    imageURL: 'https://odr3n.github.io/aboutme.jpeg',
   },
 
   social: {
