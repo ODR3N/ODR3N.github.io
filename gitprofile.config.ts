@@ -112,6 +112,11 @@ const CONFIG = {
     'Technical Documentation',
   ],
 
+  languages: [
+    { name: 'English', level: 'C1 Advanced' },
+    { name: 'Spanish', level: 'Native' },
+  ],
+
   experiences: [
     {
       company: 'Teknowledge',
