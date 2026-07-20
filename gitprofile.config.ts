@@ -4,11 +4,7 @@ const CONFIG = {
   github: {
     username: 'ODR3N',
   },
-
-  /**
-   * If your repository is ODR3N.github.io, keep base as '/'.
-   * If your repository is named something like portfolio, change it to '/portfolio/'.
-   */
+  
   base: '/',
 
   projects: {
