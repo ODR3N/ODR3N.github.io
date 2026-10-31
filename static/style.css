@@ -209,6 +209,11 @@ h2::after { content: ""; display: block; width: 2.5rem; height: 4px; border-radi
 .cert .badge.placeholder .icon { width: 30px; height: 30px; }
 .edu em { font-style: normal; color: var(--muted); }
 
+.cert .badge.tile { border-radius: 14px; border: 1px solid var(--border); background: #fff; object-fit: cover; }
+.edu li { display: flex; gap: .9rem; align-items: center; }
+.edu-logo { width: 48px; height: 48px; flex: none; border-radius: 10px; border: 1px solid var(--border); background: #fff; object-fit: cover; }
+.grid.two.projects { gap: 1.25rem; }
+
 /* Education */
 .edu { display: grid; gap: 1.1rem; }
 .edu h3 { font-size: 1.05rem; }

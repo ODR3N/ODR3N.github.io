@@ -146,6 +146,21 @@
       "url": "https://github.com/ODR3N/Hybrid-Identity-Active-Directory-Lab",
       "image": "assets/projects/hybrid-identity.jpg",
       "imageAlt": "Microsoft Entra Connect Synchronization Service Manager showing the AD and Entra ID connectors"
+    },
+    {
+      "title": "Vehicle Speed Limiter Configuration Platform",
+      "description": "A full-stack ASP.NET MVC web app delivered to a real fleet client, replacing manual, untraceable device setup. Authorized users configure vehicle speed-limiting devices over USB, manage clients and fleets, and every change is audit-logged (who, when, old → new value). Led it end to end over 12 months, from requirements to client sign-off.",
+      "tags": [
+        "C#",
+        "ASP.NET MVC",
+        "MySQL",
+        "USB hardware",
+        "RBAC",
+        "Audit logging"
+      ],
+      "url": "https://github.com/ODR3N/Vehicle-Speed-Limiter-Configuration-Platform",
+      "image": "assets/projects/vehicle-speed-limiter.jpg",
+      "imageAlt": "Electronics lab bench with an instrument cluster, wiring, and a diagnostic tablet used to test the speed-limiter devices"
     }
   ],
   "skills": [
@@ -209,7 +224,10 @@
         "Git",
         "GitHub",
         "Auvik",
-        "Microsoft Copilot"
+        "Microsoft Copilot",
+        "C#",
+        "ASP.NET MVC",
+        "MySQL"
       ]
     }
   ],
@@ -236,12 +254,14 @@
     },
     {
       "name": "C1 Advanced English (BELT)",
-      "issuer": "Idioma Internacional"
+      "issuer": "Idioma Internacional",
+      "logo": "assets/logos/belt.png"
     },
     {
       "name": "CCNA v7, Modules I & II",
       "issuer": "Cisco",
-      "year": "2022"
+      "year": "2022",
+      "logo": "assets/logos/cisco.png"
     },
     {
       "name": "Technical Support Fundamentals",
@@ -253,21 +273,25 @@
       "school": "Universidad Fidélitas",
       "program": "Bachelor's in Computer Systems Engineering",
       "period": "2021 – 2026",
-      "note": "Degree pending conferral"
+      "note": "Degree pending conferral",
+      "logo": "assets/logos/fidelitas.png"
     },
     {
       "school": "Universidad de Costa Rica (UCR)",
       "program": "Conversational English B2+",
-      "period": "Oct 2022 – Dec 2022"
+      "period": "Oct 2022 – Dec 2022",
+      "logo": "assets/logos/ucr.png"
     },
     {
       "school": "COVAO Cartago",
       "program": "Industrial Electronics Technician",
-      "period": "2018 – 2020"
+      "period": "2018 – 2020",
+      "logo": "assets/logos/covao.png"
     },
     {
       "school": "Colegio Vocacional de Artes y Oficios",
-      "program": "Técnico Medio en Electrónica"
+      "program": "Técnico Medio en Electrónica",
+      "logo": "assets/logos/covao.png"
     }
   ],
   "languages": [

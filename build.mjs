@@ -98,6 +98,8 @@ const certs = c.certifications
     const meta = [ce.issuer, ce.year].filter(Boolean).map(esc).join(' · ');
     const badge = ce.badge
       ? `<img class="badge" src="${esc(ce.badge)}" alt="${esc(ce.name)} badge" width="72" height="72" loading="lazy">`
+      : ce.logo
+      ? `<img class="badge tile" src="${esc(ce.logo)}" alt="${esc(ce.issuer || ce.name)} logo" width="72" height="72" loading="lazy">`
       : `<span class="badge placeholder" aria-hidden="true">${svg('award')}</span>`;
     const name = esc(ce.name).replace(/\(([^)]+)\)/g, '<span class="nowrap">($1)</span>');
     const text = `<div><h3>${name}</h3>${meta ? `<p>${meta}</p>` : ''}${
@@ -113,10 +115,13 @@ const education = c.education
   .map(
     (e) => `
       <li>
+        ${e.logo ? `<img class="edu-logo" src="${esc(e.logo)}" alt="${esc(e.school)} logo" width="48" height="48" loading="lazy">` : ''}
+        <div>
         <h3>${esc(e.school)}</h3>
         <p>${esc(e.program)}${e.period ? ` <span class="sep">·</span> <span class="period">${esc(e.period)}</span>` : ''}${
           e.note ? ` <span class="sep">·</span> <em>${esc(e.note)}</em>` : ''
         }</p>
+        </div>
       </li>`,
   )
   .join('');
@@ -207,7 +212,7 @@ ${
 
     <section id="projects"><div class="wrap">
       <h2>Projects</h2>
-      <div class="grid three">${projects}</div>
+      <div class="grid two projects">${projects}</div>
     </div></section>
 
     <section id="skills" class="alt"><div class="wrap">
