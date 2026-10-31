@@ -166,8 +166,14 @@ h2::after { content: ""; display: block; width: 2.5rem; height: 4px; border-radi
 .project { display: flex; flex-direction: column; gap: .75rem; }
 .project h3 { font-size: 1.1rem; }
 .project p { color: var(--muted); font-size: .98rem; margin: 0; flex: 1; }
-.more { font-weight: 600; text-decoration: none; font-size: .95rem; }
-.more:hover { text-decoration: underline; }
+.project { position: relative; transition: transform .15s ease, border-color .15s ease; }
+.project h3 a { color: var(--text); text-decoration: none; }
+.project .stretched::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.project:hover { border-color: var(--accent); transform: translateY(-2px); }
+.project:hover h3 a { color: var(--accent); }
+.project:has(.stretched:focus-visible) { outline: 3px solid var(--accent); outline-offset: 3px; }
+.project .stretched:focus-visible { outline: none; }
+.more { font-weight: 600; font-size: .95rem; color: var(--accent); }
 
 .tags { display: flex; flex-wrap: wrap; gap: .45rem; }
 .tags li {
@@ -213,7 +219,7 @@ footer p { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .btn { transition: none; }
+  .btn, .project { transition: none; }
 }
 
 /* Print: a clean one-column resume-style page */

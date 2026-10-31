@@ -4,7 +4,6 @@
     "title": "Adrian Fonseca Coto | Product Specialist & Azure Cloud Support",
     "description": "Portfolio of Adrian Fonseca Coto, Product Specialist at WWT (Softchoice) in San Jose, Costa Rica. Azure-certified (AZ-104) and Linux-certified (LFCS), focused on customer onboarding, cloud support, Azure, Linux, Active Directory, and troubleshooting."
   },
-
   "profile": {
     "name": "Adrian Fonseca Coto",
     "headline": "Product Specialist | Azure Cloud Support | Linux",
@@ -14,10 +13,9 @@
     "tagline": "I help customers get new solutions deployed and running, and I build real cloud and Linux systems to keep learning.",
     "about": [
       "I'm a Product Specialist at WWT (Softchoice) on the SAM team, leading customer onboarding, deployment, and RMM and network monitoring rollouts. I'm bilingual (English C1), Azure-certified (AZ-104), and Linux-certified (LFCS), with a background in technical support, help desk, and cloud infrastructure.",
-      "I don't just collect certifications. I build real systems: an enterprise-style Azure landing zone, a hardened multi-node Linux environment, and Active Directory hybrid identity labs. The work is documented on GitHub."
+      "I don't just collect certifications. I build real systems: a hub-spoke Azure landing zone in Bicep, a multi-node Linux reverse proxy environment with TLS and firewalling, and a hybrid Active Directory and Entra ID identity lab. Each one is documented on GitHub."
     ]
   },
-
   "links": {
     "email": "adrfc.pro@gmail.com",
     "phone": "+506 8780-6996",
@@ -25,14 +23,24 @@
     "github": "https://github.com/ODR3N",
     "resume": "https://drive.google.com/file/d/1v8XOPppa_jzackY-T49sA2VDeGBQkAA9/view?usp=sharing"
   },
-
   "highlights": [
-    { "value": "500+", "label": "support requests handled per year" },
-    { "value": "0", "label": "SLA breaches, triage to resolution" },
-    { "value": "5h → 1h", "label": "daily reporting workflow, redesigned" },
-    { "value": "AZ-104 · LFCS", "label": "Azure and Linux certified" }
+    {
+      "value": "500+",
+      "label": "support requests handled per year"
+    },
+    {
+      "value": "0",
+      "label": "SLA breaches, triage to resolution"
+    },
+    {
+      "value": "5h → 1h",
+      "label": "daily reporting workflow, redesigned"
+    },
+    {
+      "value": "AZ-104 · LFCS",
+      "label": "Azure and Linux certified"
+    }
   ],
-
   "experience": [
     {
       "company": "World Wide Technology (WWT / Softchoice)",
@@ -72,47 +80,108 @@
       ]
     }
   ],
-
   "projects": [
     {
-      "title": "Enterprise Azure Landing Zone",
-      "description": "An enterprise-style Azure landing zone defined as code with Bicep, covering governance, identity, networking, and access control.",
-      "tags": ["Azure", "Bicep", "RBAC", "Governance"],
-      "url": "https://github.com/ODR3N"
+      "title": "Azure Landing Zone Lab",
+      "description": "A hub-spoke Azure environment built from scratch with the Azure CLI and modular Bicep: VNet peering, least-privilege NSGs, Azure Bastion access, Key Vault with Managed Identity (no stored secrets), RBAC across scopes, Azure Monitor alerts and budgets, plus Intune device compliance.",
+      "tags": [
+        "Azure",
+        "Bicep",
+        "Networking",
+        "RBAC",
+        "Key Vault",
+        "Intune"
+      ],
+      "url": "https://github.com/ODR3N/azure-landing-zone-lab"
     },
     {
-      "title": "Hardened Multi-Node Linux Lab",
-      "description": "A multi-node Linux environment with security hardening, SSH access control, service management, and troubleshooting runbooks.",
-      "tags": ["Linux", "Ubuntu Server", "Bash", "Security"],
-      "url": "https://github.com/ODR3N"
+      "title": "Linux Reverse Proxy Infrastructure Lab",
+      "description": "A multi-node Ubuntu Server environment with an Nginx reverse proxy in front of a Python backend: static networking, TLS termination with HTTP→HTTPS redirect, rate limiting, UFW firewall rules, systemd-managed services, and access logging.",
+      "tags": [
+        "Linux",
+        "Nginx",
+        "TLS",
+        "UFW",
+        "systemd",
+        "Python"
+      ],
+      "url": "https://github.com/ODR3N/Linux-Reverse-Proxy-Infrastructure-Lab"
     },
     {
-      "title": "Active Directory Hybrid Identity",
-      "description": "Hybrid identity scenarios connecting on-premises Active Directory with Microsoft Entra ID, including sign-in and access flows.",
-      "tags": ["Active Directory", "Entra ID", "MFA", "Identity"],
-      "url": "https://github.com/ODR3N"
+      "title": "Hybrid Identity & Active Directory Lab",
+      "description": "An enterprise-style hybrid identity setup: AD DS on Windows Server with an OU structure, users, department security groups, and password and lockout GPOs, synchronized to Microsoft Entra ID with Entra Connect.",
+      "tags": [
+        "Active Directory",
+        "Entra ID",
+        "Entra Connect",
+        "Group Policy",
+        "Windows Server"
+      ],
+      "url": "https://github.com/ODR3N/Hybrid-Identity-Active-Directory-Lab"
     }
   ],
-
   "skills": [
     {
       "group": "Cloud & Identity",
-      "items": ["Microsoft Azure", "Bicep", "Entra ID", "Active Directory", "RBAC", "Key Vault", "Managed Identity", "MFA", "Microsoft 365"]
+      "items": [
+        "Microsoft Azure",
+        "Bicep",
+        "Entra ID",
+        "Active Directory",
+        "RBAC",
+        "Key Vault",
+        "Managed Identity",
+        "MFA",
+        "Microsoft 365",
+        "Entra Connect",
+        "Intune",
+        "Azure Monitor"
+      ]
     },
     {
       "group": "Linux & Networking",
-      "items": ["Linux", "Ubuntu Server", "Bash", "Systemd", "SSH", "Nginx", "TCP/IP", "DNS", "HTTP/HTTPS", "Firewalls"]
+      "items": [
+        "Linux",
+        "Ubuntu Server",
+        "Bash",
+        "Systemd",
+        "SSH",
+        "Nginx",
+        "TCP/IP",
+        "DNS",
+        "HTTP/HTTPS",
+        "Firewalls",
+        "UFW",
+        "TLS"
+      ]
     },
     {
       "group": "Support & Operations",
-      "items": ["Customer Onboarding", "RMM & Network Monitoring", "Technical Support", "Incident Management", "Root Cause Analysis", "ServiceNow", "Jira", "Technical Documentation", "Asset Management", "Software Product Management"]
+      "items": [
+        "Customer Onboarding",
+        "RMM & Network Monitoring",
+        "Technical Support",
+        "Incident Management",
+        "Root Cause Analysis",
+        "ServiceNow",
+        "Jira",
+        "Technical Documentation",
+        "Asset Management",
+        "Software Product Management"
+      ]
     },
     {
       "group": "Tools & Scripting",
-      "items": ["Python", "SQL", "Power BI", "Git", "GitHub"]
+      "items": [
+        "Azure CLI",
+        "Python",
+        "SQL",
+        "Power BI",
+        "Git",
+        "GitHub"
+      ]
     }
   ],
-
   "certifications": [
     {
       "name": "Azure Administrator Associate (AZ-104)",
@@ -141,12 +210,19 @@
       "issuer": "Cisco",
       "year": "2022"
     },
-    { "name": "Storage in Azure" },
-    { "name": "Compute Resources in Azure" },
-    { "name": "Ethical Hacking" },
-    { "name": "Principios de Ciberseguridad" }
+    {
+      "name": "Storage in Azure"
+    },
+    {
+      "name": "Compute Resources in Azure"
+    },
+    {
+      "name": "Ethical Hacking"
+    },
+    {
+      "name": "Principios de Ciberseguridad"
+    }
   ],
-
   "education": [
     {
       "school": "Universidad Fidélitas",
@@ -168,9 +244,14 @@
       "program": "Técnico Medio en Electrónica"
     }
   ],
-
   "languages": [
-    { "name": "English", "level": "C1 Advanced" },
-    { "name": "Spanish", "level": "Native" }
+    {
+      "name": "English",
+      "level": "C1 Advanced"
+    },
+    {
+      "name": "Spanish",
+      "level": "Native"
+    }
   ]
 }
