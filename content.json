@@ -1,0 +1,176 @@
+{
+  "site": {
+    "url": "https://odr3n.github.io",
+    "title": "Adrian Fonseca Coto | Product Specialist & Azure Cloud Support",
+    "description": "Portfolio of Adrian Fonseca Coto, Product Specialist at WWT (Softchoice) in San Jose, Costa Rica. Azure-certified (AZ-104) and Linux-certified (LFCS), focused on customer onboarding, cloud support, Azure, Linux, Active Directory, and troubleshooting."
+  },
+
+  "profile": {
+    "name": "Adrian Fonseca Coto",
+    "headline": "Product Specialist | Azure Cloud Support | Linux",
+    "location": "San Jose, Costa Rica",
+    "photo": "assets/profile.jpg",
+    "photoAlt": "Portrait of Adrian Fonseca Coto",
+    "tagline": "I help customers get new solutions deployed and running, and I build real cloud and Linux systems to keep learning.",
+    "about": [
+      "I'm a Product Specialist at WWT (Softchoice) on the SAM team, leading customer onboarding, deployment, and RMM and network monitoring rollouts. I'm bilingual (English C1), Azure-certified (AZ-104), and Linux-certified (LFCS), with a background in technical support, help desk, and cloud infrastructure.",
+      "I don't just collect certifications. I build real systems: an enterprise-style Azure landing zone, a hardened multi-node Linux environment, and Active Directory hybrid identity labs. The work is documented on GitHub."
+    ]
+  },
+
+  "links": {
+    "email": "adrfc.pro@gmail.com",
+    "phone": "+506 8780-6996",
+    "linkedin": "https://www.linkedin.com/in/afc2806",
+    "github": "https://github.com/ODR3N",
+    "resume": "https://drive.google.com/file/d/1v8XOPppa_jzackY-T49sA2VDeGBQkAA9/view?usp=sharing"
+  },
+
+  "highlights": [
+    { "value": "500+", "label": "support requests handled per year" },
+    { "value": "0", "label": "SLA breaches, triage to resolution" },
+    { "value": "5h → 1h", "label": "daily reporting workflow, redesigned" },
+    { "value": "AZ-104 · LFCS", "label": "Azure and Linux certified" }
+  ],
+
+  "experience": [
+    {
+      "company": "World Wide Technology (WWT / Softchoice)",
+      "companyUrl": "https://www.wwt.com",
+      "role": "Product Specialist, SAM Team",
+      "period": "Sep 2026 – Present",
+      "location": "San Jose, Costa Rica",
+      "bullets": [
+        "Lead customer deployment and technical onboarding sessions, from solution configuration through go-live.",
+        "Support the rollout of RMM and network monitoring solutions across customer environments.",
+        "Key point of contact through the onboarding lifecycle, coordinating with sales, customer success, and technical teams.",
+        "Manage an inbound case queue and contribute to onboarding documentation and self-service resources."
+      ]
+    },
+    {
+      "company": "TeKnowledge",
+      "role": "Customer Success Manager, Technical Support (Microsoft Partner Operations)",
+      "period": "Apr 2025 – Jul 2026",
+      "location": "Costa Rica",
+      "bullets": [
+        "Owned an inbound queue of 500+ multi-client requests a year in ServiceNow and Jira, with zero SLA breaches from triage through resolution.",
+        "Supported onboarding and configuration of Microsoft 365 and Azure environments, resolving integration and deployment issues across diverse client setups.",
+        "Used Microsoft Copilot for process optimization and information analysis in daily workflow management.",
+        "Authored and maintained the team's knowledge base and onboarding runbooks, turning individual fixes into reusable self-service documentation.",
+        "Redesigned a manual reporting workflow from 5 hours a day to 1, a 5x reduction."
+      ]
+    },
+    {
+      "company": "Intronix",
+      "role": "Technical Support & Electronics Technician",
+      "period": "Oct 2020 – Dec 2024",
+      "location": "Costa Rica",
+      "bullets": [
+        "Diagnosed hardware, software, and connectivity failures using structured root-cause analysis, validating fixes and documenting corrective actions.",
+        "Delivered customer-facing technical support, managing communication, expectations, and follow-up through resolution.",
+        "Maintained technical documentation covering failure modes, corrective procedures, and equipment specs."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Enterprise Azure Landing Zone",
+      "description": "An enterprise-style Azure landing zone defined as code with Bicep, covering governance, identity, networking, and access control.",
+      "tags": ["Azure", "Bicep", "RBAC", "Governance"],
+      "url": "https://github.com/ODR3N"
+    },
+    {
+      "title": "Hardened Multi-Node Linux Lab",
+      "description": "A multi-node Linux environment with security hardening, SSH access control, service management, and troubleshooting runbooks.",
+      "tags": ["Linux", "Ubuntu Server", "Bash", "Security"],
+      "url": "https://github.com/ODR3N"
+    },
+    {
+      "title": "Active Directory Hybrid Identity",
+      "description": "Hybrid identity scenarios connecting on-premises Active Directory with Microsoft Entra ID, including sign-in and access flows.",
+      "tags": ["Active Directory", "Entra ID", "MFA", "Identity"],
+      "url": "https://github.com/ODR3N"
+    }
+  ],
+
+  "skills": [
+    {
+      "group": "Cloud & Identity",
+      "items": ["Microsoft Azure", "Bicep", "Entra ID", "Active Directory", "RBAC", "Key Vault", "Managed Identity", "MFA", "Microsoft 365"]
+    },
+    {
+      "group": "Linux & Networking",
+      "items": ["Linux", "Ubuntu Server", "Bash", "Systemd", "SSH", "Nginx", "TCP/IP", "DNS", "HTTP/HTTPS", "Firewalls"]
+    },
+    {
+      "group": "Support & Operations",
+      "items": ["Customer Onboarding", "RMM & Network Monitoring", "Technical Support", "Incident Management", "Root Cause Analysis", "ServiceNow", "Jira", "Technical Documentation", "Asset Management", "Software Product Management"]
+    },
+    {
+      "group": "Tools & Scripting",
+      "items": ["Python", "SQL", "Power BI", "Git", "GitHub"]
+    }
+  ],
+
+  "certifications": [
+    {
+      "name": "Azure Administrator Associate (AZ-104)",
+      "issuer": "Microsoft",
+      "year": "2026",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/AdrianFonseca-2806/5C4E5ECF63DB14BD?sharingId"
+    },
+    {
+      "name": "Linux Foundation Certified System Administrator (LFCS)",
+      "issuer": "The Linux Foundation",
+      "year": "2026",
+      "url": "https://www.credly.com/badges/638cf953-108c-4b77-a37c-bbee9ae55f95/linked_in_profile"
+    },
+    {
+      "name": "Azure Fundamentals (AZ-900)",
+      "issuer": "Microsoft",
+      "year": "2025",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/AdrianFonseca-1773/291F39D812EBB34C?sharingId"
+    },
+    {
+      "name": "Technical Support Fundamentals",
+      "year": "2025"
+    },
+    {
+      "name": "CCNA, Modules I & II",
+      "issuer": "Cisco",
+      "year": "2022"
+    },
+    { "name": "Storage in Azure" },
+    { "name": "Compute Resources in Azure" },
+    { "name": "Ethical Hacking" },
+    { "name": "Principios de Ciberseguridad" }
+  ],
+
+  "education": [
+    {
+      "school": "Universidad Fidélitas",
+      "program": "Computer Systems Engineering",
+      "period": "Jan 2021 – Feb 2026"
+    },
+    {
+      "school": "Universidad de Costa Rica (UCR)",
+      "program": "Conversational English B2+",
+      "period": "Oct 2022 – Dec 2022"
+    },
+    {
+      "school": "COVAO",
+      "program": "Technician, Industrial Electronics Technology",
+      "period": "Jan 2018 – Dec 2020"
+    },
+    {
+      "school": "Colegio Vocacional de Artes y Oficios",
+      "program": "Técnico Medio en Electrónica"
+    }
+  ],
+
+  "languages": [
+    { "name": "English", "level": "C1 Advanced" },
+    { "name": "Spanish", "level": "Native" }
+  ]
+}

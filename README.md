@@ -1,41 +1,30 @@
-# Hi, I'm Adrian Fonseca Coto
+# Adrian Fonseca Coto — Portfolio
 
-I'm a Technical Support and Cloud Support professional from Costa Rica with experience in customer success operations, Azure reporting, troubleshooting, Linux administration, and technical documentation.
+Live site: https://odr3n.github.io
 
-I currently work with enterprise customer support processes, service health analysis, Azure usage reporting, Power BI-based insights, and operational support workflows. My long-term goal is to grow into Cloud Engineering, DevOps, and Site Reliability Engineering roles by building practical, production-style projects.
+A small, dependency-free static site. There is no framework and nothing to install.
 
-## Current focus
+## Update the site
 
-I am currently developing my skills through a hands-on Cloud, DevOps, SRE, and DevSecOps roadmap focused on practical, production-style projects.
+Almost everything is edited in one file: **`content.json`** (role, experience, projects, skills, certifications, education, links).
 
-My focus is on strengthening the foundations needed for cloud support, infrastructure operations, and reliability engineering:
+1. Edit `content.json` (on GitHub: open the file, click the pencil icon, edit, commit).
+2. Commit to `main`. GitHub Actions runs `npm run build` (which just runs `node build.mjs`) and publishes the site in about a minute.
 
-- Linux administration: Ubuntu Server, users, permissions, services, logs, cron, storage, LVM, SSH, and systemd
-- Networking: TCP/IP, DNS, HTTP/HTTPS, ports, sockets, firewall basics, routing concepts, and troubleshooting
-- Web infrastructure: Nginx reverse proxy, TLS termination, rate limiting, logging, and health checks
-- Cloud platforms: Microsoft Azure fundamentals, identity, governance, compute, storage, networking, and cloud support workflows
-- Automation: Bash scripting, GitHub Actions, CI/CD fundamentals, and repeatable operational workflows
-- Infrastructure as Code: Terraform fundamentals and cloud infrastructure provisioning concepts
-- Containers: Docker fundamentals, containerized services, and deployment workflows
-- Kubernetes: orchestration fundamentals, workloads, services, configuration, and operational concepts
-- Observability and reliability: monitoring, logging, incident response, service health, and SRE practices
-- Security foundations: access control, secure configuration, secrets handling, vulnerability awareness, and DevSecOps principles
-- Data and reporting: SQL, Power BI, Excel, Azure usage analysis, and service health reporting
+Other files:
 
-## Certification Roadmap
+| File | What it is |
+| --- | --- |
+| `content.json` | All the text and links |
+| `build.mjs` | Turns `content.json` into `dist/index.html` (Node only, no packages) |
+| `static/style.css` | Design: colors are variables at the top of the file |
+| `static/assets/profile.jpg` | Profile photo |
+| `package.json` | Only defines the `build` script; there are no dependencies |
+| `.github/workflows/` | Build and deploy to GitHub Pages |
 
-Earned:
+## Preview locally
 
-- Linux Foundation Certified System Administrator (LFCS)
-- Microsoft Certified: Azure Fundamentals (AZ-900)
-
-Currently pursuing / planning:
-
-- Microsoft Certified: Azure Administrator Associate (AZ-104)
-- Microsoft Certified: DevOps Engineer Expert (AZ-400)
-- HashiCorp Certified: Terraform Associate
-- Kubernetes and cloud-native certifications as I continue progressing toward DevOps/SRE roles
-
-## Main interests
-
-Cloud Support · Linux · Azure · Networking · Technical Support · DevOps · SRE · Troubleshooting
+```sh
+node build.mjs
+npx serve dist   # or: python3 -m http.server -d dist
+```
