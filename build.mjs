@@ -60,10 +60,10 @@ const projects = c.projects
   .map(
     (pr) => `
       <article class="card project">
-        <h3>${esc(pr.title)}</h3>
+        <h3><a class="stretched" href="${esc(pr.url)}"${ext(pr.url)}>${esc(pr.title)}</a></h3>
         <p>${esc(pr.description)}</p>
         <ul class="tags">${pr.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
-        <a class="more" href="${esc(pr.url)}"${ext(pr.url)}>View on GitHub <span aria-hidden="true">→</span></a>
+        <span class="more" aria-hidden="true">View repository →</span>
       </article>`,
   )
   .join('');
