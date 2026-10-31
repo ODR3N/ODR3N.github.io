@@ -18,7 +18,7 @@ Other files:
 | `content.json` | All the text and links |
 | `build.mjs` | Turns `content.json` into `dist/index.html` (Node only, no packages) |
 | `static/style.css` | Design: colors are variables at the top of the file |
-| `static/assets/profile.jpg` | Profile photo |
+| `static/assets/` | Photo, CV (PDF), company logos, certification badges, project covers, link-preview image |
 | `package.json` | Only defines the `build` script; there are no dependencies |
 | `.github/workflows/` | Build and deploy to GitHub Pages |
 
@@ -27,4 +27,13 @@ Other files:
 ```sh
 node build.mjs
 npx serve dist   # or: python3 -m http.server -d dist
+```
+
+## Visitor stats (optional)
+
+The site supports [GoatCounter](https://www.goatcounter.com) (free, no cookies). Create an account, pick a code
+(for example `odr3n`, which gives `odr3n.goatcounter.com`), then put that code in `content.json`:
+
+```json
+"analytics": { "goatcounter": "odr3n" }
 ```

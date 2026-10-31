@@ -19,12 +19,13 @@ const icon = {
   link: '<path d="M10 14a4 4 0 0 0 5.700 0l3-3a4 4 0 0 0-5.700-5.700l-1 1M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1"/>',
   sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/>',
   moon: '<path d="M20 14.500A8 8 0 0 1 9.500 4 8 8 0 1 0 20 14.500z"/>',
+  award: '<circle cx="12" cy="9" r="6"/><path d="m8.500 13.900-1.500 7.100 5-3 5 3-1.500-7.100"/>',
   pin: '<path d="M12 21s7-6.200 7-11a7 7 0 1 0-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/>',
 };
 const svg = (name) =>
   `<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${icon[name]}</svg>`;
 
-const ext = (url) => (/^https?:/.test(url) ? ' target="_blank" rel="noopener noreferrer"' : '');
+const ext = (url) => (/^https?:|\.pdf$/.test(url) ? ' target="_blank" rel="noopener noreferrer"' : '');
 
 const nav = [
   ['about', 'About'],
@@ -44,9 +45,18 @@ const experience = c.experience
   .map(
     (e) => `
       <article class="job">
-        <div class="job-head">
-          <h3>${esc(e.role)}</h3>
-          <p class="period">${esc(e.period)}</p>
+        <div class="job-top">
+          ${
+            e.logos?.length
+              ? `<div class="logos">${e.logos
+                  .map((lg) => `<img src="${esc(lg.src)}" alt="${esc(lg.alt)}" width="48" height="48" loading="lazy">`)
+                  .join('')}</div>`
+              : ''
+          }
+          <div class="job-head">
+            <h3>${esc(e.role)}</h3>
+            <p class="period">${esc(e.period)}</p>
+          </div>
         </div>
         <p class="company">${
           e.companyUrl ? `<a href="${esc(e.companyUrl)}"${ext(e.companyUrl)}>${esc(e.company)}</a>` : esc(e.company)
@@ -60,6 +70,11 @@ const projects = c.projects
   .map(
     (pr) => `
       <article class="card project">
+        ${
+          pr.image
+            ? `<img class="cover" src="${esc(pr.image)}" alt="${esc(pr.imageAlt || '')}" width="960" height="540" loading="lazy">`
+            : ''
+        }
         <h3><a class="stretched" href="${esc(pr.url)}"${ext(pr.url)}>${esc(pr.title)}</a></h3>
         <p>${esc(pr.description)}</p>
         <ul class="tags">${pr.tags.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
@@ -81,10 +96,16 @@ const skills = c.skills
 const certs = c.certifications
   .map((ce) => {
     const meta = [ce.issuer, ce.year].filter(Boolean).map(esc).join(' · ');
-    const inner = `<h3>${esc(ce.name)}</h3>${meta ? `<p>${meta}</p>` : ''}`;
+    const badge = ce.badge
+      ? `<img class="badge" src="${esc(ce.badge)}" alt="${esc(ce.name)} badge" width="72" height="72" loading="lazy">`
+      : `<span class="badge placeholder" aria-hidden="true">${svg('award')}</span>`;
+    const name = esc(ce.name).replace(/\(([^)]+)\)/g, '<span class="nowrap">($1)</span>');
+    const text = `<div><h3>${name}</h3>${meta ? `<p>${meta}</p>` : ''}${
+      ce.url ? `<span class="verify">Verify ${svg('link')}</span>` : ''
+    }</div>`;
     return ce.url
-      ? `<li class="card cert"><a href="${esc(ce.url)}"${ext(ce.url)}>${inner}<span class="verify">Verify ${svg('link')}</span></a></li>`
-      : `<li class="card cert">${inner}</li>`;
+      ? `<li class="card cert"><a href="${esc(ce.url)}"${ext(ce.url)}>${badge}${text}</a></li>`
+      : `<li class="card cert"><div class="cert-body">${badge}${text}</div></li>`;
   })
   .join('');
 
@@ -93,7 +114,9 @@ const education = c.education
     (e) => `
       <li>
         <h3>${esc(e.school)}</h3>
-        <p>${esc(e.program)}${e.period ? ` <span class="sep">·</span> <span class="period">${esc(e.period)}</span>` : ''}</p>
+        <p>${esc(e.program)}${e.period ? ` <span class="sep">·</span> <span class="period">${esc(e.period)}</span>` : ''}${
+          e.note ? ` <span class="sep">·</span> <em>${esc(e.note)}</em>` : ''
+        }</p>
       </li>`,
   )
   .join('');
@@ -126,12 +149,19 @@ const html = `<!doctype html>
   <meta property="og:title" content="${esc(site.title)}">
   <meta property="og:description" content="${esc(site.description)}">
   <meta property="og:url" content="${esc(site.url)}/">
-  <meta property="og:image" content="${esc(site.url)}/${esc(p.photo)}">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="${esc(site.url)}/${esc(site.ogImage || p.photo)}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${esc(p.name)}: ${esc(p.headline)}">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="color-scheme" content="light dark">
   <script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="stylesheet" href="style.css">
-  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+${
+  c.analytics?.goatcounter
+    ? `  <script data-goatcounter="https://${esc(c.analytics.goatcounter)}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>\n`
+    : ''
+}  <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -154,7 +184,7 @@ const html = `<!doctype html>
           <p class="headline">${esc(p.headline)}</p>
           <p class="lead">${esc(p.tagline)}</p>
           <div class="actions">
-            <a class="btn primary" href="${esc(l.resume)}"${ext(l.resume)}>${svg('doc')} Resume</a>
+            <a class="btn primary" href="${esc(l.resume)}"${ext(l.resume)}>${svg('doc')} Resume (PDF)</a>
             <a class="btn" href="${esc(l.linkedin)}"${ext(l.linkedin)}>${svg('linkedin')} LinkedIn</a>
             <a class="btn" href="${esc(l.github)}"${ext(l.github)}>${svg('github')} GitHub</a>
             <a class="btn" href="mailto:${esc(l.email)}">${svg('mail')} Email</a>
@@ -202,8 +232,7 @@ const html = `<!doctype html>
       <p>I'm always happy to talk about cloud, Linux, and customer onboarding.</p>
       <ul class="contact">
         <li>${svg('mail')} <a href="mailto:${esc(l.email)}">${esc(l.email)}</a></li>
-        <li>${svg('phone')} <a href="tel:${esc(l.phone.replace(/[^+\d]/g, ''))}">${esc(l.phone)}</a></li>
-        <li>${svg('linkedin')} <a href="${esc(l.linkedin)}"${ext(l.linkedin)}>linkedin.com/in/afc2806</a></li>
+${l.phone ? `        <li>${svg('phone')} <a href="tel:${esc(l.phone.replace(/[^+\d]/g, ''))}">${esc(l.phone)}</a></li>\n` : ''}        <li>${svg('linkedin')} <a href="${esc(l.linkedin)}"${ext(l.linkedin)}>linkedin.com/in/afc2806</a></li>
         <li>${svg('github')} <a href="${esc(l.github)}"${ext(l.github)}>github.com/ODR3N</a></li>
       </ul>
     </div></section>
