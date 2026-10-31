@@ -14,7 +14,7 @@ const CONFIG = {
         {
           title: 'About Me',
           description:
-            'Technical Support and Cloud Support professional (AZ-104 & LFCS certified) with 5+ years of experience managing 500+ annual support requests with zero SLA breaches, across customer success operations, Azure reporting, service health analysis, and technical documentation. Building hands-on Linux, networking, cloud, and DevOps/SRE projects to grow into production-focused cloud engineering roles. Also open to Help Desk, IT Support, and System Administrator positions. Based in Costa Rica, open to remote roles across the US, Canada, Latin America, and Europe. English: C1 Advanced (EF SET 77/100).',
+            'Product Specialist at WWT (Softchoice) on the SAM team, leading customer onboarding, deployment, and RMM/network monitoring rollouts. Bilingual (English C1 Advanced), Azure-certified (AZ-104) and Linux-certified (LFCS), with a background spanning technical support, help desk, and cloud infrastructure. Managed 500+ annual support requests via ServiceNow and Jira with zero SLA breaches, and cut a manual reporting workflow from 5 hours a day to 1. I build real systems to learn: an enterprise-style Azure landing zone, a hardened multi-node Linux environment, and Active Directory hybrid identity labs, all documented on GitHub. Based in San Jose, Costa Rica.',
           imageUrl:
             '/aboutme.jpeg',
           link: 'https://www.linkedin.com/in/afc2806',
@@ -40,9 +40,9 @@ const CONFIG = {
   },
 },
   seo: {
-    title: 'Adrian Fonseca Coto | Technical Support & Cloud Support Portfolio',
+    title: 'Adrian Fonseca Coto | Product Specialist & Azure Cloud Support Portfolio',
     description:
-      'Portfolio of Adrian Fonseca Coto, Computer Systems Engineer based in Costa Rica, open to remote roles across the US, Canada, Latin America, and Europe. Focused on Technical Support, Cloud Support, Linux administration, Azure, troubleshooting, and DevOps/SRE foundations.',
+      'Portfolio of Adrian Fonseca Coto, Product Specialist at WWT (Softchoice) based in San Jose, Costa Rica. Azure-certified (AZ-104) and Linux-certified (LFCS), focused on customer onboarding, cloud support, Azure, Linux administration, Active Directory, and troubleshooting.',
     imageURL: 'https://odr3n.github.io/aboutme.jpeg',
   },
 
@@ -74,14 +74,22 @@ const CONFIG = {
   },
 
   skills: [
+    'Cloud Services',
+    'Software Product Management',
+    'Asset Management',
+    'Customer Onboarding',
+    'RMM & Network Monitoring',
     'Technical Support',
-    'Cloud Support',
     'Troubleshooting',
     'Root Cause Analysis',
     'Incident Management',
     'ServiceNow',
+    'Jira',
+    'Microsoft 365',
     'Microsoft Azure',
+    'Bicep',
     'Entra ID',
+    'Active Directory',
     'RBAC',
     'Key Vault',
     'Managed Identity',
@@ -102,11 +110,9 @@ const CONFIG = {
     'Firewalls',
     'Git',
     'GitHub',
-    'C#',
-    '.NET Core',
-    'MySQL',
     'Technical Documentation',
   ],
+
 
   languages: [
     { name: 'English', level: 'C1 Advanced' },
@@ -115,20 +121,46 @@ const CONFIG = {
 
   experiences: [
     {
-      company: 'Teknowledge',
+      company: 'World Wide Technology (WWT / Softchoice)',
+      position: 'Product Specialist, SAM Team',
+      from: 'September 2026',
+      to: 'Present',
+      companyLink: 'https://www.wwt.com',
+      description: [
+        'Lead customer deployment and technical onboarding sessions, from solution configuration through go-live.',
+        'Support the rollout of RMM and network monitoring solutions across customer environments.',
+        'Key point of contact through the onboarding lifecycle, coordinating with sales, customer success, and technical teams.',
+        'Manage an inbound case queue and contribute to onboarding documentation and self-service resources.',
+      ],
+    },
+    {
+      company: 'TeKnowledge',
       position: 'Customer Success Manager Technical Support, Microsoft Partner Operations',
       from: 'April 2025',
       to: 'July 2026',
       companyLink: '',
+      description: [
+        'Owned an inbound queue of 500+ multi-client requests annually via ServiceNow and Jira, with zero SLA breaches from triage through resolution.',
+        'Supported onboarding and configuration of Microsoft 365 and Azure environments, resolving integration and deployment issues across diverse client setups.',
+        'Used Microsoft Copilot for process optimization and information analysis in daily workflow management.',
+        "Authored and maintained the team's knowledge base and onboarding runbooks, turning individual fixes into reusable self-service documentation.",
+        'Redesigned a manual reporting workflow from 5 hours a day to 1, a 5x reduction.',
+      ],
     },
     {
-      company: 'Intronix S.A.',
+      company: 'Intronix',
       position: 'Technical Support & Electronics Technician',
       from: 'October 2020',
       to: 'December 2024',
       companyLink: '',
+      description: [
+        'Diagnosed hardware, software, and connectivity failures using structured root-cause analysis, validating fixes and documenting corrective actions.',
+        'Delivered customer-facing technical support, managing communication, expectations, and follow-up through resolution.',
+        'Maintained technical documentation covering failure modes, corrective procedures, and equipment specs.',
+      ],
     },
   ],
+
 
   certifications: [
     {
@@ -161,22 +193,59 @@ const CONFIG = {
       year: '2025',
       link: '',
     },
+    {
+      name: 'Storage in Azure',
+      body: 'Covers Azure storage accounts, data redundancy, access control, and managing storage for cloud workloads.',
+      year: '',
+      link: '',
+    },
+    {
+      name: 'Compute Resources in Azure',
+      body: 'Covers deploying and managing Azure virtual machines and other compute resources.',
+      year: '',
+      link: '',
+    },
+    {
+      name: 'Ethical Hacking',
+      body: 'Introduction to ethical hacking concepts, security assessment, and defensive practices.',
+      year: '',
+      link: '',
+    },
+    {
+      name: 'Principios de Ciberseguridad',
+      body: 'Cybersecurity fundamentals: core principles, common threats, and basic protection practices.',
+      year: '',
+      link: '',
+    },
   ],
 
   educations: [
     {
       institution: 'Universidad Fidélitas',
-      degree: 'Bachelor’s Degree in Computer Systems Engineering',
-      from: '2021',
-      to: '2026',
+      degree: 'Computer Systems Engineering',
+      from: 'January 2021',
+      to: 'February 2026',
+    },
+    {
+      institution: 'Universidad de Costa Rica (UCR)',
+      degree: 'Conversational English B2+',
+      from: 'October 2022',
+      to: 'December 2022',
     },
     {
       institution: 'COVAO',
-      degree: 'Mid-Level Technician in Industrial Electronics',
-      from: '2018',
-      to: '2020',
+      degree: 'Technician, Industrial Electronics Technology',
+      from: 'January 2018',
+      to: 'December 2020',
+    },
+    {
+      institution: 'Colegio Vocacional de Artes y Oficios',
+      degree: 'Técnico Medio en Electrónica',
+      from: '',
+      to: '',
     },
   ],
+
 
   publications: [],
 
