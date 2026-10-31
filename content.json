@@ -21,7 +21,8 @@
     "email": "adrfc.pro@gmail.com",
     "linkedin": "https://www.linkedin.com/in/afc2806",
     "github": "https://github.com/ODR3N",
-    "resume": "assets/Adrian_Fonseca_CV.pdf"
+    "resume": "assets/Adrian_Fonseca_CV.pdf",
+    "linkedinRecommendations": "https://www.linkedin.com/in/afc2806/details/recommendations/"
   },
   "highlights": [
     {
@@ -250,7 +251,8 @@
       "name": "Azure Fundamentals (AZ-900)",
       "issuer": "Microsoft",
       "year": "2025",
-      "url": "https://learn.microsoft.com/api/credentials/share/en-us/AdrianFonseca-1773/291F39D812EBB34C?sharingId"
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/AdrianFonseca-1773/291F39D812EBB34C?sharingId",
+      "badge": "assets/badges/az-900.png"
     },
     {
       "name": "C1 Advanced English (BELT)",
@@ -265,7 +267,9 @@
     },
     {
       "name": "Technical Support Fundamentals",
-      "year": "2025"
+      "year": "2025",
+      "issuer": "Google (Coursera)",
+      "logo": "assets/logos/google.png"
     }
   ],
   "education": [
@@ -283,14 +287,9 @@
       "logo": "assets/logos/ucr.png"
     },
     {
-      "school": "COVAO Cartago",
-      "program": "Industrial Electronics Technician",
+      "school": "COVAO, Colegio Vocacional de Artes y Oficios (Cartago)",
+      "program": "Industrial Electronics Technician (Técnico Medio en Electrónica)",
       "period": "2018 – 2020",
-      "logo": "assets/logos/covao.png"
-    },
-    {
-      "school": "Colegio Vocacional de Artes y Oficios",
-      "program": "Técnico Medio en Electrónica",
       "logo": "assets/logos/covao.png"
     }
   ],
@@ -306,5 +305,63 @@
   ],
   "analytics": {
     "goatcounter": "odr3n"
+  },
+  "recommendations": [
+    {
+      "name": "Josue Delgado Morales",
+      "title": "Experienced Team Manager",
+      "relation": "Managed Adrian directly",
+      "date": "June 2026",
+      "quote": "Adrian consistently meets and exceeds KPIs, showing precision, responsibility, and a strong attention to detail. His proactive mindset and collaborative approach ensure that projects are delivered with excellence."
+    },
+    {
+      "name": "Marco Ramirez",
+      "title": "Global Operations Leader",
+      "relation": "Managed Adrian directly",
+      "date": "June 2026",
+      "quote": "Adrian has consistently demonstrated a strong commitment to excellence, a high level of responsibility, and a serious approach to doing things the right way. … His ability to work efficiently, remain focused, and support consistent results has made a meaningful impact on the team’s success."
+    },
+    {
+      "name": "Sheyla Lizano",
+      "title": "Product and Graphic Designer",
+      "relation": "Worked with Adrian on the same team",
+      "date": "July 2026",
+      "quote": "Having Adrian on our team has been an absolute game-changer for our workflow. He is the kind of colleague who is always there to help, combining deep technical knowledge with an incredible talent for optimizing processes and development routes."
+    }
+  ],
+  "ui": {
+    "lang": "en",
+    "locale": "en_US",
+    "switchLabel": "ES",
+    "switchTitle": "Ver en español",
+    "skip": "Skip to content",
+    "theme": "Toggle light and dark theme",
+    "nav": {
+      "experience": "Experience",
+      "projects": "Projects",
+      "recommendations": "Recommendations",
+      "skills": "Skills",
+      "certifications": "Certifications",
+      "contact": "Contact"
+    },
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "recommendations": "Recommendations",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "education": "Education",
+    "languages": "Languages",
+    "contact": "Get in touch",
+    "contactText": "I'm always happy to talk about cloud, Linux, and customer onboarding.",
+    "resume": "Resume (PDF)",
+    "email": "Email",
+    "viewRepo": "View repository",
+    "verify": "Verify",
+    "recsMore": "Read the full recommendations on LinkedIn",
+    "recsNote": "",
+    "badge": "badge",
+    "logo": "logo",
+    "updated": "Updated"
   }
 }

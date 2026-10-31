@@ -1,0 +1,178 @@
+{
+  "_info": "Spanish version. Only text lives here; anything missing is taken from content.json. Lists line up by position with content.json.",
+
+  "site": {
+    "title": "Adrian Fonseca Coto | Product Specialist y soporte en la nube de Azure",
+    "description": "Portafolio de Adrian Fonseca Coto, Product Specialist en el equipo de Software Asset Management de WWT (Softchoice) en San José, Costa Rica. Certificado en Azure (AZ-104) y Linux (LFCS), con seis años de experiencia en soporte técnico, help desk e infraestructura en la nube."
+  },
+
+  "profile": {
+    "headline": "Product Specialist, Software Asset Management · Soporte técnico e infraestructura en la nube",
+    "photoAlt": "Retrato de Adrian Fonseca Coto",
+    "tagline": "Ayudo a los clientes a implementar y poner en marcha nuevas soluciones, y construyo sistemas reales en la nube y en Linux para seguir aprendiendo.",
+    "about": [
+      "Soy Product Specialist en el equipo de Software Asset Management (SAM) de WWT (Softchoice), donde ayudo a los clientes a implementar software y herramientas de visibilidad de SaaS. Tengo seis años de experiencia en soporte técnico, help desk e infraestructura en la nube, certificaciones en Azure (AZ-104) y Linux (LFCS) e inglés nivel C1, con un fuerte enfoque en la comunicación con clientes, la gestión de casos con SLA y la documentación clara.",
+      "No solo colecciono certificaciones: construyo sistemas reales. Una landing zone hub-spoke en Azure con Bicep, un entorno Linux de varios nodos con proxy inverso, TLS y firewall, y un laboratorio de identidad híbrida con Active Directory y Entra ID. Todo está documentado en GitHub."
+    ]
+  },
+
+  "highlights": [
+    { "value": "6 años", "label": "en soporte técnico, help desk y nube" },
+    { "label": "casos al año sin incumplir ningún SLA" },
+    { "label": "flujo de reportes diario, rediseñado" },
+    { "label": "certificado en Azure y Linux" }
+  ],
+
+  "experience": [
+    {
+      "period": "sept. 2026 – actualidad",
+      "location": "Costa Rica (híbrido)",
+      "bullets": [
+        "Apoyo sesiones de onboarding e implementación de clientes para la herramienta SAM+ Discovery (con tecnología de Auvik), desde la configuración de la solución hasta la puesta en marcha.",
+        "Apoyo implementaciones de RMM y monitoreo de red en entornos de clientes, resolviendo el acceso a la red, el descubrimiento de dispositivos y la configuración de credenciales.",
+        "Atiendo una cola de casos entrantes, clasificando solicitudes y resolviéndolas dentro de los SLA establecidos; soy punto de contacto durante el onboarding de clientes.",
+        "Contribuyo a los runbooks de onboarding y a la documentación de autoservicio, y transmito la retroalimentación de los clientes al equipo de producto."
+      ]
+    },
+    {
+      "role": "Customer Success Manager, soporte técnico (Microsoft Partner Operations)",
+      "period": "abr. 2025 – jul. 2026",
+      "location": "Costa Rica (híbrido)",
+      "bullets": [
+        "Gestioné una cola de más de 500 solicitudes de múltiples clientes al año en ServiceNow y Jira, sin incumplir ningún SLA desde la clasificación hasta la resolución.",
+        "Apoyé el onboarding y la configuración de entornos de Microsoft 365 y Azure, resolviendo problemas de integración e implementación en distintos clientes.",
+        "Usé Microsoft Copilot para optimizar procesos y analizar información en la gestión diaria del trabajo.",
+        "Redacté y mantuve la base de conocimiento y los runbooks de onboarding del equipo, convirtiendo soluciones individuales en documentación reutilizable de autoservicio.",
+        "Rediseñé un flujo de reportes manual de 5 horas diarias a 1, una reducción de 5 veces."
+      ]
+    },
+    {
+      "role": "Técnico de soporte técnico y electrónica",
+      "period": "oct. 2020 – dic. 2024",
+      "bullets": [
+        "Diagnostiqué fallas de hardware, software y conectividad con análisis estructurado de causa raíz, validando soluciones y documentando las acciones correctivas.",
+        "Brindé soporte técnico directo a clientes, gestionando la comunicación, las expectativas y el seguimiento hasta la resolución.",
+        "Mantuve documentación técnica sobre modos de falla, procedimientos correctivos y especificaciones de equipos."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Laboratorio de Azure Landing Zone",
+      "description": "Un entorno hub-spoke en Azure construido desde cero con Azure CLI y Bicep modular: peering de VNet, NSG de mínimo privilegio, acceso con Azure Bastion, Key Vault con Managed Identity (sin secretos almacenados), RBAC en varios ámbitos, alertas y presupuestos de Azure Monitor, y cumplimiento de dispositivos con Intune.",
+      "tags": ["Azure", "Bicep", "Redes", "RBAC", "Key Vault", "Intune"],
+      "imageAlt": "Árbol en terminal con los módulos de Bicep y la documentación del repositorio de la landing zone de Azure"
+    },
+    {
+      "title": "Laboratorio de infraestructura Linux con proxy inverso",
+      "description": "Un entorno Ubuntu Server de varios nodos con un proxy inverso Nginx frente a un backend en Python: red estática, terminación TLS con redirección de HTTP a HTTPS, limitación de tasa, reglas de firewall con UFW, servicios gestionados con systemd y registros de acceso.",
+      "imageAlt": "Estado del firewall UFW en la VM del proxy, que solo permite SSH, HTTP y HTTPS"
+    },
+    {
+      "title": "Laboratorio de identidad híbrida y Active Directory",
+      "description": "Una configuración de identidad híbrida al estilo empresarial: AD DS en Windows Server con estructura de OU, usuarios, grupos de seguridad por departamento y GPO de contraseñas y bloqueo de cuentas, sincronizado con Microsoft Entra ID mediante Entra Connect.",
+      "imageAlt": "Synchronization Service Manager de Microsoft Entra Connect con los conectores de AD y Entra ID"
+    },
+    {
+      "title": "Plataforma de configuración de limitadores de velocidad",
+      "description": "Una aplicación web full-stack en ASP.NET MVC entregada a un cliente real con flota, que reemplazó una configuración manual y sin trazabilidad. Los usuarios autorizados configuran por USB los limitadores de velocidad de los vehículos, gestionan clientes y flotas, y cada cambio queda registrado (quién, cuándo y valor anterior → nuevo). Lo lideré de principio a fin durante 12 meses, desde los requerimientos hasta la aceptación del cliente.",
+      "tags": ["C#", "ASP.NET MVC", "MySQL", "Hardware USB", "RBAC", "Auditoría"],
+      "imageAlt": "Banco de pruebas de electrónica con un tablero de instrumentos, cableado y una tableta de diagnóstico usados para probar los limitadores de velocidad"
+    }
+  ],
+
+  "skills": [
+    { "group": "Nube e identidad" },
+    {
+      "group": "Linux y redes",
+      "items": ["Linux", "Ubuntu Server", "Bash", "Systemd", "SSH", "Nginx", "TCP/IP", "DNS", "HTTP/HTTPS", "Firewalls", "UFW", "TLS", "Hardening de SSH"]
+    },
+    {
+      "group": "Soporte y operaciones",
+      "items": [
+        "Onboarding de clientes",
+        "RMM y monitoreo de red",
+        "Soporte técnico",
+        "Gestión de incidentes",
+        "Análisis de causa raíz",
+        "ServiceNow",
+        "Jira",
+        "Documentación técnica",
+        "Gestión de activos",
+        "Gestión de productos de software"
+      ]
+    },
+    { "group": "Herramientas y scripting" }
+  ],
+
+  "certifications": [
+    {},
+    {},
+    {},
+    { "name": "Inglés C1 Avanzado (BELT)" },
+    { "name": "CCNA v7, módulos I y II" },
+    {}
+  ],
+
+  "education": [
+    {
+      "program": "Bachillerato en Ingeniería en Sistemas de Computación",
+      "note": "Título pendiente de entrega"
+    },
+    {
+      "program": "Inglés Conversacional B2+",
+      "period": "oct. 2022 – dic. 2022"
+    },
+    {
+      "program": "Técnico Medio en Electrónica Industrial"
+    }
+  ],
+
+  "languages": [
+    { "name": "Inglés", "level": "C1 Avanzado" },
+    { "name": "Español", "level": "Nativo" }
+  ],
+
+  "recommendations": [
+    { "relation": "Fue supervisor directo de Adrian", "date": "junio de 2026" },
+    { "relation": "Fue supervisor directo de Adrian", "date": "junio de 2026" },
+    { "relation": "Trabajó con Adrian en el mismo equipo", "date": "julio de 2026" }
+  ],
+
+  "ui": {
+    "lang": "es",
+    "locale": "es_CR",
+    "switchLabel": "EN",
+    "switchTitle": "View in English",
+    "skip": "Saltar al contenido",
+    "theme": "Cambiar entre tema claro y oscuro",
+    "nav": {
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "recommendations": "Recomendaciones",
+      "skills": "Habilidades",
+      "certifications": "Certificaciones",
+      "contact": "Contacto"
+    },
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "recommendations": "Recomendaciones",
+    "skills": "Habilidades",
+    "certifications": "Certificaciones",
+    "education": "Educación",
+    "languages": "Idiomas",
+    "contact": "Hablemos",
+    "contactText": "Siempre estoy dispuesto a conversar sobre la nube, Linux y el onboarding de clientes.",
+    "resume": "Currículum (PDF, en inglés)",
+    "email": "Correo",
+    "viewRepo": "Ver repositorio",
+    "verify": "Verificar",
+    "recsMore": "Ver las recomendaciones completas en LinkedIn",
+    "recsNote": "Las recomendaciones están escritas originalmente en inglés.",
+    "badge": "insignia",
+    "logo": "logo",
+    "updated": "Actualizado"
+  }
+}
